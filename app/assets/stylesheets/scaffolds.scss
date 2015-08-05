@@ -72,6 +72,8 @@ div {
   }
 }
 
+
+
 body {
   background-color: #DEDEB9;
 }
@@ -82,4 +84,16 @@ body h1 {
   padding: 20px 0px 0px 10%;
   margin-top: 0px;
   border-bottom: solid 4px green;
+
+}
+
+body table {
+  margin: 0 5%;
+  display: inline-block;
+}
+
+body img {
+  height: 210px;
+  width: 280px;
+  margin: 5%;
 }

@@ -1,9 +1,10 @@
 class CreateTrips < ActiveRecord::Migration
   def change
     create_table :trips do |t|
-      t.string :destination
+      t.destination :string
+      t.image_url :string
       t.date :date
-      t.text :description
+      t.description :text
 
       t.timestamps null: false
     end

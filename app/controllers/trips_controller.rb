@@ -6,7 +6,7 @@ class TripsController < ApplicationController
   def index
     @trips = Trip.all
   end
-
+  
   # GET /trips/1
   # GET /trips/1.json
   def show
@@ -69,6 +69,6 @@ class TripsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-      params.require(:trip).permit(:destination, :date, :description)
+      params.require(:trip).permit(:destination, :image_url, :date, :description)
     end
 end

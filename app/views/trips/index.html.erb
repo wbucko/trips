@@ -2,30 +2,16 @@
 
 <h1>Listing Trips</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Destination</th>
-      <th>Date</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
+<table>
   <tbody>
     <% @trips.each do |trip| %>
-      <tr>
-        <td><%= trip.destination %></td>
-        <td><%= trip.date %></td>
-        <td><%= trip.description %></td>
-        <td><%= link_to 'Show', trip %></td>
-        <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
-        <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <td><%= link_to image_tag(trip.image_url), trip %></td>
+      
     <% end %>
   </tbody>
 </table>
 
 <br>
-
 <%= link_to 'New Trip', new_trip_path %>
+
