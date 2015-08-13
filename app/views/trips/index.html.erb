@@ -1,17 +1,15 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Trips</h1>
-
-
-<table>
-  <tbody>
+<div class="header">
+<h1>Podróże i wycieczki</h1>
+<h2><%= link_to 'New Trip', new_trip_path %></h2>
+</div>
+<div class="section">
     <% @trips.each do |trip| %>
-      <td><%= link_to image_tag(trip.image_url), trip %></td>
+      <div class="trip_img"><%= link_to image_tag(trip.image_url), trip %></div>
       
     <% end %>
-  </tbody>
-</table>
 
-<br>
-<%= link_to 'New Trip', new_trip_path %>
 
+
+<p id="notice"><%= notice %></p>
+</div>

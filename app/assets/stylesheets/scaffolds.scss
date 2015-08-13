@@ -20,6 +20,7 @@ pre {
 
 a {
   color: #000;
+  text-decoration: none;
 
   &:visited {
     color: #666;
@@ -72,28 +73,69 @@ div {
   }
 }
 
+/***************************************
 
+MOJE WARIACJE
+
+**************************************/
+
+html {
+  height: 100%;
+  width: 100%;
+}
 
 body {
-  background-color: #DEDEB9;
+  background-color: #f5f5dc;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
-body h1 {
-  background-color: #24C924;
-  height: 40px;
-  padding: 20px 0px 0px 10%;
+.section {
+  height: 100%;
+}
+
+.trip_img {
+  height: 40vh;
+  width: 28vw;
+  margin: 2%;
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+
+}
+
+.trip_img img {
+  max-width: 100%;
+}
+
+.header {
+  background-color: #31698a;
+  height: 80px;
+  width: 100%;
   margin-top: 0px;
-  border-bottom: solid 4px green;
+  border-bottom: solid 4px #2a334f;
+ }
 
-}
-
-body table {
-  margin: 0 5%;
+.header h1 {
+  padding: 2vh 0 0 10%;
+  color: white;
   display: inline-block;
 }
 
-body img {
-  height: 210px;
-  width: 280px;
-  margin: 5%;
+.header a {
+  margin: -5vh 5% 0 0;
+  float: right;
+  color: white;
+}
+
+/**************************
+    RES TO 800px
+*************************/
+
+@media (max-width: 800px) {
+  .trip_img {
+    height: 30vh;
+    width: 40vw;  
+  }
 }
