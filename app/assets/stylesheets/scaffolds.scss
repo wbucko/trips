@@ -34,7 +34,6 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
   }
 }
 
@@ -79,55 +78,85 @@ MOJE WARIACJE
 
 **************************************/
 
-html {
-  height: 100%;
-  width: 100%;
-}
 
 body {
-  background-color: #f5f5dc;
-  height: 100%;
-  width: 100%;
-  margin: 0;
+  background-color: #CDB380;
+
 }
 
 .section {
-  height: 100%;
+  width: 84%;
+  margin: 0 6.5%;
 }
 
 .trip_img {
-  height: 40vh;
-  width: 28vw;
-  margin: 2%;
+  height: 20vw;
+  width: 31.33%;
+  margin: 1%;
   display: inline-block;
   float: left;
   overflow: hidden;
-
 }
 
 .trip_img img {
   max-width: 100%;
+  min-height: 100%;
 }
 
 .header {
-  background-color: #31698a;
+  background-color: #036564;
   height: 80px;
   width: 100%;
   margin-top: 0px;
-  border-bottom: solid 4px #2a334f;
+  border-bottom: solid 4px #6A4A3C;
+  text-transform: uppercase;
+  color: white;
+  margin: -1%;
+
  }
 
 .header h1 {
-  padding: 2vh 0 0 10%;
-  color: white;
-  display: inline-block;
+  float: left;
+  padding: 15px 0 0 10%;
+}
+
+.header ul {
+  padding: 25px 2% 0 0;
+  float: right;
+  width: 15%;
+}
+
+.header li {
+  display: inline;
+  margin: 1%;
 }
 
 .header a {
-  margin: -5vh 5% 0 0;
-  float: right;
   color: white;
 }
+
+
+/********************************
+Each trip page
+**************************/
+
+
+.img_show {
+  height: 50vw;
+  width: 60%;  
+  overflow: hidden; 
+  margin: auto;
+  border: solid 2px black;
+  max-height: 530px;
+  max-width: 630px;
+
+}
+.img_show img {
+  max-width: 100%;
+  min-height: 100%;
+
+}
+
 
 /**************************
     RES TO 800px
@@ -135,7 +164,32 @@ body {
 
 @media (max-width: 800px) {
   .trip_img {
-    height: 30vh;
-    width: 40vw;  
+    height: 30vw;
+    width: 48%;
   }
+  
+  .header h1 {
+    clear: both;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-top: 3%;
+    line-height: 1em;
+  }
+
+  .header ul {
+    width: 100%;
+    clear: both;
+    margin: auto;
+    padding: 0;
+    text-align: center;    
+  }
+
+  .header {
+    height: 100px;
+
+ }
+
 }
+
+
