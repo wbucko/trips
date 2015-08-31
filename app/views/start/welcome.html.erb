@@ -1,0 +1,31 @@
+<div class="header">
+  <h1>There and back again</h1>
+  <ul>
+    <li><%= link_to 'New Trip', new_trip_path %></li>
+    <li><%= link_to 'Log In', root_path %></li>
+  </ul>
+</div>
+
+<div class="first">
+	<h1>Save your memories</h1>
+	<p>Log in or create new account.</p>
+
+<% if flash[:alert] %>
+  <%= flash[:alert] %>
+<% end %>
+<%= form_tag do %>
+  <div>
+    <%= label_tag :email, 'Email:' %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div>
+    <%= label_tag :password, 'Password:' %>
+    <%= password_field_tag :password, params[:password] %>
+  </div>
+  <div>
+    <%= submit_tag "Log in" %>
+  </div>
+<% end %>
+<%= link_to 'Click if you do not have an account', new_user_path %>
+</div>
+

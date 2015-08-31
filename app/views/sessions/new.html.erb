@@ -1,0 +1,29 @@
+<!--<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+-->
+<div class="header">
+  <h1>There and back again</h1>
+  <ul>
+    <li><%= link_to 'New Trip', new_trip_path %></li>
+    <li><%= link_to 'Log In', login_path %></li>
+  </ul>
+</div>
+
+
+<% if flash[:alert] %>
+  <%= flash[:alert] %>
+<% end %>
+<%= form_tag do %>
+  <legend>Logowanie</legend>
+  <div>
+    <%= label_tag :email, 'Email:' %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div>
+    <%= label_tag :password, 'Hasło:' %>
+    <%= password_field_tag :password, params[:password] %>
+  </div>
+  <div>
+    <%= submit_tag "Zaloguj" %>
+  </div>
+<% end %>

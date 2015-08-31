@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
+  
+
+  get 'admin' => 'admin#index'
+  controller :sessions do
+  get 'login' => :new
+  post 'login' => :create
+  delete 'logout' => :destroy
+  end
+
+  resources :users
   resources :trips
   root 'trips#index'
+  
   delete 'trips/:id' => 'trips#destroy', as: :destroy
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
