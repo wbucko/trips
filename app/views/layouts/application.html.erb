@@ -7,6 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header">
+  <h1>There and back again</h1>
+  <ul>
+    <li><%= link_to 'Home', trips_path %></li>    
+    <li><%= link_to 'New Trip', new_trip_path %></li>
+    <% if session[:user_id] %>
+      <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to 'Log in', login_path %></li>
+    <% end %>
+    </ul>
+</div>
 
 <%= yield %>
 

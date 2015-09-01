@@ -1,11 +1,5 @@
 
-<div class="header">
-  <h1>There and back again</h1>
-  <ul>
-    <li><%= link_to 'New Trip', new_trip_path %></li>
-    <li><%= link_to 'Log In', login_path %></li>
-  </ul>
-</div>
+
 <div class="section">
     <% @trips.each do |trip| %>
       <div class="trip_img"><%= link_to image_tag(trip.image_url), trip %></div>
@@ -16,3 +10,4 @@
 
 <p id="notice"><%= notice %></p>
 </div>
+

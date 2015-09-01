@@ -123,12 +123,12 @@ body {
 .header ul {
   padding: 25px 2% 0 0;
   float: right;
-  width: 15%;
+  width: 230px;
 }
 
 .header li {
   display: inline;
-  margin: 1%;
+  margin: 2%;
 }
 
 .header a {
@@ -155,6 +155,25 @@ Each trip page
 .img_show img {
   max-width: 100%;
   min-height: 100%;
+
+}
+
+/**************************************
+Index page
+***********************************/
+
+
+.first {
+  width: 60%;
+  margin: auto;  
+  text-align: right;
+  padding: 0;
+
+}
+
+.first h1 {
+  font-size: 3em;
+  padding: 5% 0;
 
 }
 
@@ -188,8 +207,20 @@ Each trip page
 
   .header {
     height: 100px;
+  }
 
- }
+  .first {
+  width: 80%;
+  text-align: center;
+  }
+
+  .first h1 {
+  line-height: 1em;
+  }
+
+  label {
+  display: block;
+  }
 
 }
 

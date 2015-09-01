@@ -1,5 +1,6 @@
+
     <% if flash[:notice] %>
         <p id="notice"><%= flash[:notice] %></p>
     <% end %>    
-    <h1>Panel administratora</h1>
-    <%= link_to 'Wyloguj', logout_path, method: :delete %>
+    <h1>Now you can write down whatever you like!</h1>
+    <%= link_to 'Log out', logout_path, method: :delete %>

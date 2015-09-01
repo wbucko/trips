@@ -1,10 +1,10 @@
 class TripsController < ApplicationController
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorize
   # GET /trips
   # GET /trips.json
   def index
-    @trips = Trip.order("date").all
+    @trips = current_user.trips.order("date").all
 
   end
   
@@ -25,7 +25,7 @@ class TripsController < ApplicationController
   # POST /trips
   # POST /trips.json
   def create
-    @trip = Trip.new(trip_params)
+    @trip = current_user.trips.build(trip_params)
 
     respond_to do |format|
       if @trip.save
