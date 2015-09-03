@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   	user = User.find_by(email: params[:email])
   	if user and user.authenticate(params[:password])
   		session[:user_id] = user.id
-  		redirect_to admin_url, notice: "You have successfully logged in"
+  		redirect_to trips_url, notice: "You have successfully logged in"
   	else
   		redirect_to login_url, alert: "Password or email are incorect"
   	end

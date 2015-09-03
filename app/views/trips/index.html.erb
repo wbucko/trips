@@ -1,4 +1,5 @@
 
+<% if current_user.trips.count != 0 %>
 
 <div class="section">
     <% @trips.each do |trip| %>
@@ -6,7 +7,10 @@
       
     <% end %>
 
+<% else %>
 
+<h1 id="before_trip">Now you can save your favourite journeys!</h1>
+<% end %>
 
 <p id="notice"><%= notice %></p>
 </div>
